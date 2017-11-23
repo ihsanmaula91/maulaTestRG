@@ -21,6 +21,16 @@ class QuestionListModel: NSObject {
         fromDictionary(dictionary)
     }
     
+    func toDictionary() -> NSMutableDictionary {
+        let dictionary: NSMutableDictionary = NSMutableDictionary()
+        let listOfQuestion: NSMutableArray = NSMutableArray()
+        for question in questionList{
+            listOfQuestion.add(question.toDictionary())
+        }
+        dictionary.setValue(listOfQuestion, forKey: "results")
+        return dictionary
+    }
+    
     func fromDictionary(_ dictionary: NSDictionary) {
         let data = dictionary.object(forKey: "results") != nil && dictionary.object(forKey: "results") is NSArray ? dictionary.object(forKey: "results") as! NSArray : []
         for question in data {

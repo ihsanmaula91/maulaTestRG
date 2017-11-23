@@ -49,7 +49,12 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
             let categoryId = categories[indexPath.row].id!
             categoryName = categories[indexPath.row].name!
             if !isRequestQuestionData {
-                getQuestionData(categoryId)
+                if UserDefaults.standard.object(forKey: "\(categories[indexPath.row].id!)") != nil {
+                    self.questionList = QuestionListModel(dictionary: UserDefaults.standard.object(forKey: "\(categories[indexPath.row].id!)") as! NSDictionary)
+                    self.performSegue(withIdentifier: "goToQuestionPage", sender: nil)
+                } else {
+                    getQuestionData(categoryId)
+                }
             }
         }
     }
@@ -92,6 +97,7 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
                         self.hideSpinner()
                         self.isRequestQuestionData = false
                         self.questionList = QuestionListModel(dictionary: json as NSDictionary)
+                        UserDefaults.standard.setValue(self.questionList?.toDictionary(), forKey: "\(categoryId)")
                         self.performSegue(withIdentifier: "goToQuestionPage", sender: nil)
                     })
                     

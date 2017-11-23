@@ -28,8 +28,8 @@ class QuestionModel: NSObject {
     func toDictionary() -> NSMutableDictionary {
         let dictionary: NSMutableDictionary = NSMutableDictionary()
         dictionary.setValue(question, forKey: "question")
-        dictionary.setValue(correctAnswer, forKey: "correctAnswer")
-        dictionary.setValue(incorrectAnswers, forKey: "incorrectAnswers")
+        dictionary.setValue(correctAnswer, forKey: "correct_answer")
+        dictionary.setValue(incorrectAnswers, forKey: "incorrect_answers")
         
         return dictionary
     }
@@ -40,27 +40,12 @@ class QuestionModel: NSObject {
         if dictionary.object(forKey: "incorrect_answers") != nil {
             let incorrectAnswerList = dictionary.object(forKey: "incorrect_answers") as! NSArray
             for incorrectAnswer in incorrectAnswerList {
-                let answer = decodeString(data: incorrectAnswer as! String)
-                incorrectAnswers.append(answer)
+                incorrectAnswers.append(incorrectAnswer as! String)
             }
         }
-        
-        correctAnswer = decodeString(data: correctAnswer!)
-        question = decodeString(data: question!)
         
         answersList.append(correctAnswer!)
         answersList.append(contentsOf: incorrectAnswers)
         answersList.shuffle()
     }
-    
-    func decodeString(data: String) -> String {
-        var string = data
-        do {
-            try string = data.convertHtmlSymbols()!
-        } catch {
-            print(error)
-        }
-        return string
-    }
-
 }
