@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "book-mask.png",
+      "filename" : "book_mask.png",
       "scale" : "1x"
     },
     {

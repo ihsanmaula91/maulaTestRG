@@ -16,7 +16,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        categoryContentView.layer.cornerRadius = 5
     }
     
 }

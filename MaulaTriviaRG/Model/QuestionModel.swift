@@ -35,8 +35,8 @@ class QuestionModel: NSObject {
     }
     
     func fromDictionary(_ dictionary: NSDictionary) {
-        question = dictionary.object(forKey: "question") as! String
-        correctAnswer = dictionary.object(forKey: "correct_answer") as! String
+        question = dictionary.object(forKey: "question") as? String
+        correctAnswer = dictionary.object(forKey: "correct_answer") as? String
         if dictionary.object(forKey: "incorrect_answers") != nil {
             let incorrectAnswerList = dictionary.object(forKey: "incorrect_answers") as! NSArray
             for incorrectAnswer in incorrectAnswerList {

@@ -23,6 +23,7 @@
 		CC9C79AD1FC6115D00552773 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79AC1FC6115D00552773 /* BaseViewController.swift */; };
 		CCEC2BB41FC714290064098D /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = CCEC2BB31FC714290064098D /* Category.json */; };
 		CCEC2BB61FC7144A0064098D /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC2BB51FC7144A0064098D /* CategoryModel.swift */; };
+		CCEC2BB81FC71C550064098D /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC2BB71FC71C550064098D /* QuestionCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		CC9C79AC1FC6115D00552773 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CCEC2BB31FC714290064098D /* Category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Category.json; sourceTree = "<group>"; };
 		CCEC2BB51FC7144A0064098D /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		CCEC2BB71FC71C550064098D /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				CC9C799E1FC5DDB600552773 /* CategoryCollectionViewCell.swift */,
+				CCEC2BB71FC71C550064098D /* QuestionCollectionViewCell.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				CC9C797C1FC5D64700552773 /* CategoryPage.swift in Sources */,
 				CC9C79A91FC60EC600552773 /* QuestionPage.swift in Sources */,
 				CC9C79A21FC5F50E00552773 /* UIColorExtension.swift in Sources */,
+				CCEC2BB81FC71C550064098D /* QuestionCollectionViewCell.swift in Sources */,
 				CC9C79A51FC5FF3500552773 /* QuestionModel.swift in Sources */,
 				CC8BC99F1FC70E670021E167 /* QuestionListModel.swift in Sources */,
 				CC9C79AD1FC6115D00552773 /* BaseViewController.swift in Sources */,

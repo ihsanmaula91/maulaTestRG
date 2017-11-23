@@ -53,15 +53,15 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtD-9C-Pk9">
-                                                            <rect key="frame" x="4" y="101" width="168" height="20"/>
-                                                            <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
+                                                            <rect key="frame" x="4" y="94" width="168" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="16"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.56470588239999997" green="0.070588235289999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="dtD-9C-Pk9" firstAttribute="top" secondItem="0hL-W7-b8n" secondAttribute="bottom" constant="13" id="T6Y-87-Jpb"/>
+                                                        <constraint firstItem="dtD-9C-Pk9" firstAttribute="top" secondItem="0hL-W7-b8n" secondAttribute="bottom" constant="6" id="T6Y-87-Jpb"/>
                                                         <constraint firstAttribute="trailing" secondItem="dtD-9C-Pk9" secondAttribute="trailing" constant="4" id="UMk-mp-7T2"/>
                                                         <constraint firstItem="dtD-9C-Pk9" firstAttribute="leading" secondItem="3Ro-Op-92H" secondAttribute="leading" constant="4" id="eeO-uy-05y"/>
                                                         <constraint firstItem="0hL-W7-b8n" firstAttribute="centerX" secondItem="3Ro-Op-92H" secondAttribute="centerX" id="k2C-6Z-5Ug"/>
@@ -183,19 +183,73 @@
                                 <rect key="frame" x="0.0" y="148.5" width="375" height="463.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JAM-DT-UkA">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="149" height="181"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2jp-CC-gIs">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="QuestionCollectionViewCell" id="2jp-CC-gIs" customClass="QuestionCollectionViewCell" customModule="MaulaTriviaRG" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bT-in-vaC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="176" height="130"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRr-xl-9v9">
+                                                            <rect key="frame" x="6" y="6" width="30" height="30"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97R-go-eFA">
+                                                                    <rect key="frame" x="9.5" y="4.5" width="11.5" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="97R-go-eFA" firstAttribute="centerX" secondItem="QRr-xl-9v9" secondAttribute="centerX" id="1kf-A0-yi4"/>
+                                                                <constraint firstAttribute="height" constant="30" id="Y7z-kJ-JYC"/>
+                                                                <constraint firstAttribute="width" constant="30" id="daN-hX-KiC"/>
+                                                                <constraint firstItem="97R-go-eFA" firstAttribute="centerY" secondItem="QRr-xl-9v9" secondAttribute="centerY" id="oZf-5i-h9i"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hi-YZ-y6L">
+                                                            <rect key="frame" x="4" y="4" width="168" height="122"/>
+                                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="5Hi-YZ-y6L" firstAttribute="centerY" secondItem="5bT-in-vaC" secondAttribute="centerY" id="5ZR-L2-hky"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5Hi-YZ-y6L" secondAttribute="trailing" constant="4" id="DAo-aU-rsb"/>
+                                                        <constraint firstItem="5Hi-YZ-y6L" firstAttribute="top" secondItem="5bT-in-vaC" secondAttribute="top" constant="4" id="Luj-A3-NGP"/>
+                                                        <constraint firstItem="5Hi-YZ-y6L" firstAttribute="leading" secondItem="5bT-in-vaC" secondAttribute="leading" constant="4" id="RTK-BK-rb8"/>
+                                                        <constraint firstItem="QRr-xl-9v9" firstAttribute="leading" secondItem="5bT-in-vaC" secondAttribute="leading" constant="6" id="g6d-jv-oET"/>
+                                                        <constraint firstItem="QRr-xl-9v9" firstAttribute="top" secondItem="5bT-in-vaC" secondAttribute="top" constant="6" id="wMP-fc-7sW"/>
+                                                        <constraint firstAttribute="bottom" secondItem="5Hi-YZ-y6L" secondAttribute="bottom" constant="4" id="xPX-Lk-3rY"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="5bT-in-vaC" firstAttribute="top" secondItem="2jp-CC-gIs" secondAttribute="top" id="7aI-BH-GFo"/>
+                                            <constraint firstAttribute="bottom" secondItem="5bT-in-vaC" secondAttribute="bottom" id="Be6-PZ-o25"/>
+                                            <constraint firstItem="5bT-in-vaC" firstAttribute="leading" secondItem="2jp-CC-gIs" secondAttribute="leading" id="qbX-8J-hpN"/>
+                                            <constraint firstAttribute="trailing" secondItem="5bT-in-vaC" secondAttribute="trailing" id="uA2-jw-5j6"/>
+                                        </constraints>
+                                        <size key="customSize" width="176" height="130"/>
+                                        <connections>
+                                            <outlet property="answerContentView" destination="5bT-in-vaC" id="SIb-a1-DsH"/>
+                                            <outlet property="answerLabel" destination="5Hi-YZ-y6L" id="25M-OF-rWD"/>
+                                            <outlet property="circleView" destination="QRr-xl-9v9" id="eCN-KV-rq9"/>
+                                            <outlet property="multipleChoiceLabel" destination="97R-go-eFA" id="cMD-eJ-dBQ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -218,6 +272,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sqF-jk-6HR"/>
                     </view>
+                    <connections>
+                        <outlet property="questionCollectionView" destination="3QN-7c-z6l" id="mOw-Qd-14n"/>
+                        <outlet property="questionLabel" destination="Btt-Pl-SfO" id="hJT-MG-pW4"/>
+                        <outlet property="questionNumber" destination="2Wy-Fc-lZh" id="h7c-Wl-db6"/>
+                        <outlet property="rightAnswerCountLabel" destination="C3d-te-km0" id="12V-AE-WMK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnB-Bo-fgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
