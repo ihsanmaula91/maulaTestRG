@@ -125,6 +125,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextButtonClicked:" destination="2Zq-IR-hcd" eventType="touchUpInside" id="JQT-g0-MrI"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IX7-Ea-TUQ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="50"/>
@@ -180,7 +183,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3QN-7c-z6l">
-                                <rect key="frame" x="0.0" y="148.5" width="375" height="463.5"/>
+                                <rect key="frame" x="0.0" y="164.5" width="375" height="447.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JAM-DT-UkA">
                                     <size key="itemSize" width="149" height="181"/>
@@ -265,7 +268,7 @@
                             <constraint firstItem="Btt-Pl-SfO" firstAttribute="leading" secondItem="sqF-jk-6HR" secondAttribute="leading" constant="16" id="P3s-Pq-Jfa"/>
                             <constraint firstItem="CRu-QA-EUy" firstAttribute="leading" secondItem="sqF-jk-6HR" secondAttribute="leading" id="Ps6-Xh-vWc"/>
                             <constraint firstItem="sqF-jk-6HR" firstAttribute="trailing" secondItem="Btt-Pl-SfO" secondAttribute="trailing" constant="16" id="ZWh-Qz-TkA"/>
-                            <constraint firstItem="3QN-7c-z6l" firstAttribute="top" secondItem="Btt-Pl-SfO" secondAttribute="bottom" id="cqP-De-4ir"/>
+                            <constraint firstItem="3QN-7c-z6l" firstAttribute="top" secondItem="Btt-Pl-SfO" secondAttribute="bottom" constant="16" id="cqP-De-4ir"/>
                             <constraint firstItem="sqF-jk-6HR" firstAttribute="trailing" secondItem="IX7-Ea-TUQ" secondAttribute="trailing" id="mhd-3W-7wj"/>
                             <constraint firstItem="IX7-Ea-TUQ" firstAttribute="leading" secondItem="sqF-jk-6HR" secondAttribute="leading" id="svY-F4-ia9"/>
                             <constraint firstItem="Btt-Pl-SfO" firstAttribute="top" secondItem="IX7-Ea-TUQ" secondAttribute="bottom" constant="16" id="xwj-Bf-HoX"/>
@@ -273,6 +276,7 @@
                         <viewLayoutGuide key="safeArea" id="sqF-jk-6HR"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="CRu-QA-EUy" id="UUQ-IO-rrr"/>
                         <outlet property="questionCollectionView" destination="3QN-7c-z6l" id="mOw-Qd-14n"/>
                         <outlet property="questionLabel" destination="Btt-Pl-SfO" id="hJT-MG-pW4"/>
                         <outlet property="questionNumber" destination="2Wy-Fc-lZh" id="h7c-Wl-db6"/>

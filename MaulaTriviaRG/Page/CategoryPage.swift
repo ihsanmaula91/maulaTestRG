@@ -14,6 +14,7 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
     var categories : [CategoryModel] = []
     var questionList: QuestionListModel?
     var isRequestQuestionData: Bool = false
+    var categoryName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,7 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let categoryId = categories[indexPath.row].id!
+        categoryName = categories[indexPath.row].name!
         if !isRequestQuestionData {
             getQuestionData(categoryId)
         }
@@ -75,18 +77,21 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
         URLSession.shared.dataTask(with: url!, completionHandler: {
             (data, response, error) in
             if(error != nil){
-                print("error")
+                self.isRequestQuestionData = false
+                self.showErrorAlert()
             }else{
                 do{
                     let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
                     
                     OperationQueue.main.addOperation({
+                        self.isRequestQuestionData = false
                         self.questionList = QuestionListModel(dictionary: json as NSDictionary)
                         self.performSegue(withIdentifier: "goToQuestionPage", sender: nil)
                     })
                     
-                }catch let error as NSError{
-                    print(error)
+                }catch _ as NSError {
+                    self.isRequestQuestionData = false
+                    self.showErrorAlert()
                 }
             }
         }).resume()
@@ -95,9 +100,22 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToQuestionPage" {
             let questionPage = segue.destination as! QuestionPage
-            questionPage.questionList = questionList
+            questionPage.categoryName = categoryName
+            questionPage.questionListModel = questionList
             questionPage.currentQuestion = (questionList?.questionList[0])!
         }
+    }
+    
+    func showErrorAlert() {
+        let message = "Oops! Something went wrong."
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            alertController.dismiss(animated: true, completion: nil)
+        })
+        
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
 
