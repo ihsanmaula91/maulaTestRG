@@ -12,6 +12,8 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
 
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     var categories : [CategoryModel] = []
+    var questionList: QuestionListModel?
+    var isRequestQuestionData: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,10 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "goToQuestionPage", sender: nil)
+        let categoryId = categories[indexPath.row].id!
+        if !isRequestQuestionData {
+            getQuestionData(categoryId)
+        }
     }
     
     func getCategoryData() {
@@ -63,12 +68,36 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
             
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func getQuestionData(_ categoryId: Int) {
+        isRequestQuestionData = true
+        let url = URL(string: "https://opentdb.com/api.php?amount=10&category=\(categoryId)&type=multiple")
+        URLSession.shared.dataTask(with: url!, completionHandler: {
+            (data, response, error) in
+            if(error != nil){
+                print("error")
+            }else{
+                do{
+                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
+                    
+                    OperationQueue.main.addOperation({
+                        self.questionList = QuestionListModel(dictionary: json as NSDictionary)
+                        self.performSegue(withIdentifier: "goToQuestionPage", sender: nil)
+                    })
+                    
+                }catch let error as NSError{
+                    print(error)
+                }
+            }
+        }).resume()
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToQuestionPage" {
+            let questionPage = segue.destination as! QuestionPage
+            questionPage.questionList = questionList
+            questionPage.currentQuestion = (questionList?.questionList[0])!
+        }
+    }
 }
 

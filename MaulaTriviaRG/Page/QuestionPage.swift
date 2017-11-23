@@ -15,6 +15,9 @@ class QuestionPage: BaseViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var questionNumber: UILabel!
     @IBOutlet weak var questionCollectionView: UICollectionView!
     
+    var questionList: QuestionListModel?
+    var currentQuestion: QuestionModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Entertaiment: Film"
@@ -22,16 +25,19 @@ class QuestionPage: BaseViewController, UICollectionViewDataSource, UICollection
         questionCollectionView.dataSource = self
         let flow: UICollectionViewFlowLayout = questionCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         flow.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        questionLabel.text = currentQuestion?.question
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return currentQuestion!.answersList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let index = indexPath.row
+        let answer = currentQuestion?.answersList[index]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCollectionViewCell", for: indexPath as IndexPath) as! QuestionCollectionViewCell
         cell.multipleChoiceLabel.text = index == 0 ? "A" : index == 1 ? "B" : index == 2 ? "C" : "D"
+        cell.answerLabel.text = answer
         return cell
     }
     
