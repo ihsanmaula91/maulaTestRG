@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC8BC99F1FC70E670021E167 /* QuestionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BC99E1FC70E670021E167 /* QuestionListModel.swift */; };
+		CC9C797A1FC5D64700552773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79791FC5D64700552773 /* AppDelegate.swift */; };
+		CC9C797C1FC5D64700552773 /* CategoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C797B1FC5D64700552773 /* CategoryPage.swift */; };
+		CC9C797F1FC5D64700552773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9C797D1FC5D64700552773 /* Main.storyboard */; };
+		CC9C79821FC5D64700552773 /* MaulaTriviaRG.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79801FC5D64700552773 /* MaulaTriviaRG.xcdatamodeld */; };
+		CC9C79841FC5D64700552773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9C79831FC5D64700552773 /* Assets.xcassets */; };
+		CC9C79871FC5D64700552773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9C79851FC5D64700552773 /* LaunchScreen.storyboard */; };
+		CC9C79921FC5D64700552773 /* MaulaTriviaRGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79911FC5D64700552773 /* MaulaTriviaRGTests.swift */; };
+		CC9C799F1FC5DDB600552773 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C799E1FC5DDB600552773 /* CategoryCollectionViewCell.swift */; };
+		CC9C79A21FC5F50E00552773 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79A11FC5F50E00552773 /* UIColorExtension.swift */; };
+		CC9C79A51FC5FF3500552773 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79A41FC5FF3500552773 /* QuestionModel.swift */; };
+		CC9C79A71FC6054500552773 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79A61FC6054500552773 /* ArrayExtension.swift */; };
+		CC9C79A91FC60EC600552773 /* QuestionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79A81FC60EC600552773 /* QuestionPage.swift */; };
+		CC9C79AD1FC6115D00552773 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79AC1FC6115D00552773 /* BaseViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC9C798E1FC5D64700552773 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC9C796E1FC5D64600552773 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC9C79751FC5D64700552773;
+			remoteInfo = MaulaTriviaRG;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC8BC99E1FC70E670021E167 /* QuestionListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListModel.swift; sourceTree = "<group>"; };
+		CC9C79761FC5D64700552773 /* MaulaTriviaRG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaulaTriviaRG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9C79791FC5D64700552773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC9C797B1FC5D64700552773 /* CategoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPage.swift; sourceTree = "<group>"; };
+		CC9C797E1FC5D64700552773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC9C79811FC5D64700552773 /* MaulaTriviaRG.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MaulaTriviaRG.xcdatamodel; sourceTree = "<group>"; };
+		CC9C79831FC5D64700552773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC9C79861FC5D64700552773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC9C79881FC5D64700552773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9C798D1FC5D64700552773 /* MaulaTriviaRGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaulaTriviaRGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9C79911FC5D64700552773 /* MaulaTriviaRGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaulaTriviaRGTests.swift; sourceTree = "<group>"; };
+		CC9C79931FC5D64700552773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9C799E1FC5DDB600552773 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		CC9C79A11FC5F50E00552773 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		CC9C79A41FC5FF3500552773 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		CC9C79A61FC6054500552773 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		CC9C79A81FC60EC600552773 /* QuestionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPage.swift; sourceTree = "<group>"; };
+		CC9C79AC1FC6115D00552773 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC9C79731FC5D64700552773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9C798A1FC5D64700552773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC9C796D1FC5D64600552773 = {
+			isa = PBXGroup;
+			children = (
+				CC9C79781FC5D64700552773 /* MaulaTriviaRG */,
+				CC9C79901FC5D64700552773 /* MaulaTriviaRGTests */,
+				CC9C79771FC5D64700552773 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC9C79771FC5D64700552773 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC9C79761FC5D64700552773 /* MaulaTriviaRG.app */,
+				CC9C798D1FC5D64700552773 /* MaulaTriviaRGTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC9C79781FC5D64700552773 /* MaulaTriviaRG */ = {
+			isa = PBXGroup;
+			children = (
+				CC9C79AB1FC6114B00552773 /* Base */,
+				CC9C79A31FC5FF0500552773 /* Model */,
+				CC9C79A01FC5F45600552773 /* Extension */,
+				CC9C799D1FC5DCCD00552773 /* Page */,
+				CC9C799C1FC5DCC500552773 /* Widget */,
+				CC9C79791FC5D64700552773 /* AppDelegate.swift */,
+				CC9C797D1FC5D64700552773 /* Main.storyboard */,
+				CC9C79831FC5D64700552773 /* Assets.xcassets */,
+				CC9C79851FC5D64700552773 /* LaunchScreen.storyboard */,
+				CC9C79881FC5D64700552773 /* Info.plist */,
+				CC9C79801FC5D64700552773 /* MaulaTriviaRG.xcdatamodeld */,
+			);
+			path = MaulaTriviaRG;
+			sourceTree = "<group>";
+		};
+		CC9C79901FC5D64700552773 /* MaulaTriviaRGTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC9C79911FC5D64700552773 /* MaulaTriviaRGTests.swift */,
+				CC9C79931FC5D64700552773 /* Info.plist */,
+			);
+			path = MaulaTriviaRGTests;
+			sourceTree = "<group>";
+		};
+		CC9C799C1FC5DCC500552773 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				CC9C799E1FC5DDB600552773 /* CategoryCollectionViewCell.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		CC9C799D1FC5DCCD00552773 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				CC9C797B1FC5D64700552773 /* CategoryPage.swift */,
+				CC9C79A81FC60EC600552773 /* QuestionPage.swift */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		CC9C79A01FC5F45600552773 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CC9C79A11FC5F50E00552773 /* UIColorExtension.swift */,
+				CC9C79A61FC6054500552773 /* ArrayExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CC9C79A31FC5FF0500552773 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC9C79A41FC5FF3500552773 /* QuestionModel.swift */,
+				CC8BC99E1FC70E670021E167 /* QuestionListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC9C79AB1FC6114B00552773 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CC9C79AC1FC6115D00552773 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC9C79751FC5D64700552773 /* MaulaTriviaRG */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9C79961FC5D64700552773 /* Build configuration list for PBXNativeTarget "MaulaTriviaRG" */;
+			buildPhases = (
+				CC9C79721FC5D64700552773 /* Sources */,
+				CC9C79731FC5D64700552773 /* Frameworks */,
+				CC9C79741FC5D64700552773 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaulaTriviaRG;
+			productName = MaulaTriviaRG;
+			productReference = CC9C79761FC5D64700552773 /* MaulaTriviaRG.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC9C798C1FC5D64700552773 /* MaulaTriviaRGTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9C79991FC5D64700552773 /* Build configuration list for PBXNativeTarget "MaulaTriviaRGTests" */;
+			buildPhases = (
+				CC9C79891FC5D64700552773 /* Sources */,
+				CC9C798A1FC5D64700552773 /* Frameworks */,
+				CC9C798B1FC5D64700552773 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC9C798F1FC5D64700552773 /* PBXTargetDependency */,
+			);
+			name = MaulaTriviaRGTests;
+			productName = MaulaTriviaRGTests;
+			productReference = CC9C798D1FC5D64700552773 /* MaulaTriviaRGTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC9C796E1FC5D64600552773 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Muhammad Ihsan Maula";
+				TargetAttributes = {
+					CC9C79751FC5D64700552773 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					CC9C798C1FC5D64700552773 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CC9C79751FC5D64700552773;
+					};
+				};
+			};
+			buildConfigurationList = CC9C79711FC5D64600552773 /* Build configuration list for PBXProject "MaulaTriviaRG" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC9C796D1FC5D64600552773;
+			productRefGroup = CC9C79771FC5D64700552773 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC9C79751FC5D64700552773 /* MaulaTriviaRG */,
+				CC9C798C1FC5D64700552773 /* MaulaTriviaRGTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC9C79741FC5D64700552773 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9C79871FC5D64700552773 /* LaunchScreen.storyboard in Resources */,
+				CC9C79841FC5D64700552773 /* Assets.xcassets in Resources */,
+				CC9C797F1FC5D64700552773 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9C798B1FC5D64700552773 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC9C79721FC5D64700552773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9C799F1FC5DDB600552773 /* CategoryCollectionViewCell.swift in Sources */,
+				CC9C797C1FC5D64700552773 /* CategoryPage.swift in Sources */,
+				CC9C79A91FC60EC600552773 /* QuestionPage.swift in Sources */,
+				CC9C79A21FC5F50E00552773 /* UIColorExtension.swift in Sources */,
+				CC9C79A51FC5FF3500552773 /* QuestionModel.swift in Sources */,
+				CC8BC99F1FC70E670021E167 /* QuestionListModel.swift in Sources */,
+				CC9C79AD1FC6115D00552773 /* BaseViewController.swift in Sources */,
+				CC9C79A71FC6054500552773 /* ArrayExtension.swift in Sources */,
+				CC9C79821FC5D64700552773 /* MaulaTriviaRG.xcdatamodeld in Sources */,
+				CC9C797A1FC5D64700552773 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9C79891FC5D64700552773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9C79921FC5D64700552773 /* MaulaTriviaRGTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC9C798F1FC5D64700552773 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC9C79751FC5D64700552773 /* MaulaTriviaRG */;
+			targetProxy = CC9C798E1FC5D64700552773 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC9C797D1FC5D64700552773 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC9C797E1FC5D64700552773 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC9C79851FC5D64700552773 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC9C79861FC5D64700552773 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC9C79941FC5D64700552773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC9C79951FC5D64700552773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC9C79971FC5D64700552773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaulaTriviaRG/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ihsanmaul.MaulaTriviaRG;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC9C79981FC5D64700552773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaulaTriviaRG/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ihsanmaul.MaulaTriviaRG;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC9C799A1FC5D64700552773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaulaTriviaRGTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ihsanmaul.MaulaTriviaRGTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MaulaTriviaRG.app/MaulaTriviaRG";
+			};
+			name = Debug;
+		};
+		CC9C799B1FC5D64700552773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaulaTriviaRGTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ihsanmaul.MaulaTriviaRGTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MaulaTriviaRG.app/MaulaTriviaRG";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC9C79711FC5D64600552773 /* Build configuration list for PBXProject "MaulaTriviaRG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9C79941FC5D64700552773 /* Debug */,
+				CC9C79951FC5D64700552773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC9C79961FC5D64700552773 /* Build configuration list for PBXNativeTarget "MaulaTriviaRG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9C79971FC5D64700552773 /* Debug */,
+				CC9C79981FC5D64700552773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC9C79991FC5D64700552773 /* Build configuration list for PBXNativeTarget "MaulaTriviaRGTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9C799A1FC5D64700552773 /* Debug */,
+				CC9C799B1FC5D64700552773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC9C79801FC5D64700552773 /* MaulaTriviaRG.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC9C79811FC5D64700552773 /* MaulaTriviaRG.xcdatamodel */,
+			);
+			currentVersion = CC9C79811FC5D64700552773 /* MaulaTriviaRG.xcdatamodel */;
+			path = MaulaTriviaRG.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CC9C796E1FC5D64600552773 /* Project object */;
+}
