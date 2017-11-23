@@ -10,8 +10,8 @@ import UIKit
 
 class QuestionModel: NSObject {
     
-    var question: String!
-    var correctAnswer: String!
+    var question: String?
+    var correctAnswer: String?
     var incorrectAnswers: [String] = []
     var answersList: [String] = []
     
@@ -44,7 +44,7 @@ class QuestionModel: NSObject {
             }
         }
         
-        answersList.append(correctAnswer)
+        answersList.append(correctAnswer!)
         answersList.append(contentsOf: incorrectAnswers)
         answersList.shuffle()
     }

@@ -1,0 +1,64 @@
+{
+    "trivia_categories":[
+                         {
+                         "id":9,
+                         "name":"General Knowledge",
+                         "background":"mask",
+                         "logo":"shape"
+                         },
+                         {
+                         "id":10,
+                         "name":"Entertainment: Books",
+                         "background":"book_mask",
+                         "logo":"book_shape"
+                         },
+                         {
+                         "id":11,
+                         "name":"Entertainment: Film",
+                         "background":"film_mask",
+                         "logo":"film_shape"
+                         },
+                         {
+                         "id":12,
+                         "name":"Entertainment: Music",
+                         "background":"music_mask",
+                         "logo":"music_shape"
+                         },
+                         {
+                         "id":15,
+                         "name":"Entertainment: Video Games",
+                         "background":"game_mask",
+                         "logo":"game_shape"
+                         },
+                         {
+                         "id":14,
+                         "name":"Entertainment: Television",
+                         "background":"tv_mask",
+                         "logo":"tv_shape"
+                         },
+                         {
+                         "id":18,
+                         "name":"Science: Computers",
+                         "background":"computer_mask",
+                         "logo":"computer_shape"
+                         },
+                         {
+                         "id":26,
+                         "name":"Celebrities",
+                         "background":"celebrities_mask",
+                         "logo":"celebrities_shape"
+                         },
+                         {
+                         "id":23,
+                         "name":"History",
+                         "background":"history_mask",
+                         "logo":"history_shape"
+                         },
+                         {
+                         "id":27,
+                         "name":"Animals",
+                         "background":"animals_mask",
+                         "logo":"animals_shape"
+                         }
+                         ]
+}

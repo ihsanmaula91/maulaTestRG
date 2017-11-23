@@ -144,13 +144,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question no. 8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wy-Fc-lZh">
-                                        <rect key="frame" x="16" y="17.5" width="84" height="16.5"/>
+                                        <rect key="frame" x="16" y="16.5" width="154.5" height="17"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                                         <color key="textColor" red="0.56470588239999997" green="0.070588235289999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Right Answers" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3d-te-km0">
-                                        <rect key="frame" x="269.5" y="17" width="89.5" height="16"/>
+                                        <rect key="frame" x="203.5" y="17" width="155.5" height="16"/>
                                         <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="14"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -164,9 +164,11 @@
                                     <constraint firstAttribute="height" constant="50" id="9mT-hf-UFa"/>
                                     <constraint firstAttribute="trailing" secondItem="C3d-te-km0" secondAttribute="trailing" constant="16" id="CGY-36-KZf"/>
                                     <constraint firstAttribute="bottom" secondItem="gWX-4K-LC6" secondAttribute="bottom" constant="6" id="Nrj-IV-ehJ"/>
+                                    <constraint firstItem="C3d-te-km0" firstAttribute="leading" secondItem="gWX-4K-LC6" secondAttribute="trailing" constant="16" id="QMr-EZ-Ei7"/>
                                     <constraint firstAttribute="trailing" secondItem="TwX-wE-kmd" secondAttribute="trailing" id="RYT-ov-Gx9"/>
                                     <constraint firstItem="gWX-4K-LC6" firstAttribute="centerX" secondItem="IX7-Ea-TUQ" secondAttribute="centerX" id="T2Q-aS-CqG"/>
                                     <constraint firstItem="2Wy-Fc-lZh" firstAttribute="centerY" secondItem="IX7-Ea-TUQ" secondAttribute="centerY" id="VtT-kl-1AW"/>
+                                    <constraint firstItem="gWX-4K-LC6" firstAttribute="leading" secondItem="2Wy-Fc-lZh" secondAttribute="trailing" constant="16" id="Zpb-Pu-TbP"/>
                                     <constraint firstAttribute="bottom" secondItem="TwX-wE-kmd" secondAttribute="bottom" id="rKc-cG-s0R"/>
                                     <constraint firstItem="2Wy-Fc-lZh" firstAttribute="leading" secondItem="IX7-Ea-TUQ" secondAttribute="leading" constant="16" id="uxy-TU-bgR"/>
                                 </constraints>

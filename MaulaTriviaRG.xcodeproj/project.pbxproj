@@ -21,6 +21,8 @@
 		CC9C79A71FC6054500552773 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79A61FC6054500552773 /* ArrayExtension.swift */; };
 		CC9C79A91FC60EC600552773 /* QuestionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79A81FC60EC600552773 /* QuestionPage.swift */; };
 		CC9C79AD1FC6115D00552773 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79AC1FC6115D00552773 /* BaseViewController.swift */; };
+		CCEC2BB41FC714290064098D /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = CCEC2BB31FC714290064098D /* Category.json */; };
+		CCEC2BB61FC7144A0064098D /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC2BB51FC7144A0064098D /* CategoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		CC9C79A61FC6054500552773 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		CC9C79A81FC60EC600552773 /* QuestionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPage.swift; sourceTree = "<group>"; };
 		CC9C79AC1FC6115D00552773 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CCEC2BB31FC714290064098D /* Category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Category.json; sourceTree = "<group>"; };
+		CCEC2BB51FC7144A0064098D /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		CC9C79781FC5D64700552773 /* MaulaTriviaRG */ = {
 			isa = PBXGroup;
 			children = (
+				CCEC2BB21FC713E80064098D /* MockJson */,
 				CC9C79AB1FC6114B00552773 /* Base */,
 				CC9C79A31FC5FF0500552773 /* Model */,
 				CC9C79A01FC5F45600552773 /* Extension */,
@@ -148,6 +153,7 @@
 			children = (
 				CC9C79A41FC5FF3500552773 /* QuestionModel.swift */,
 				CC8BC99E1FC70E670021E167 /* QuestionListModel.swift */,
+				CCEC2BB51FC7144A0064098D /* CategoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +164,14 @@
 				CC9C79AC1FC6115D00552773 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		CCEC2BB21FC713E80064098D /* MockJson */ = {
+			isa = PBXGroup;
+			children = (
+				CCEC2BB31FC714290064098D /* Category.json */,
+			);
+			path = MockJson;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +260,7 @@
 				CC9C79871FC5D64700552773 /* LaunchScreen.storyboard in Resources */,
 				CC9C79841FC5D64700552773 /* Assets.xcassets in Resources */,
 				CC9C797F1FC5D64700552773 /* Main.storyboard in Resources */,
+				CCEC2BB41FC714290064098D /* Category.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +285,7 @@
 				CC9C79A51FC5FF3500552773 /* QuestionModel.swift in Sources */,
 				CC8BC99F1FC70E670021E167 /* QuestionListModel.swift in Sources */,
 				CC9C79AD1FC6115D00552773 /* BaseViewController.swift in Sources */,
+				CCEC2BB61FC7144A0064098D /* CategoryModel.swift in Sources */,
 				CC9C79A71FC6054500552773 /* ArrayExtension.swift in Sources */,
 				CC9C79821FC5D64700552773 /* MaulaTriviaRG.xcdatamodeld in Sources */,
 				CC9C797A1FC5D64700552773 /* AppDelegate.swift in Sources */,
