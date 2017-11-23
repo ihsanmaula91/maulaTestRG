@@ -40,13 +40,27 @@ class QuestionModel: NSObject {
         if dictionary.object(forKey: "incorrect_answers") != nil {
             let incorrectAnswerList = dictionary.object(forKey: "incorrect_answers") as! NSArray
             for incorrectAnswer in incorrectAnswerList {
-                incorrectAnswers.append(incorrectAnswer as! String)
+                let answer = decodeString(data: incorrectAnswer as! String)
+                incorrectAnswers.append(answer)
             }
         }
+        
+        correctAnswer = decodeString(data: correctAnswer!)
+        question = decodeString(data: question!)
         
         answersList.append(correctAnswer!)
         answersList.append(contentsOf: incorrectAnswers)
         answersList.shuffle()
+    }
+    
+    func decodeString(data: String) -> String {
+        var string = data
+        do {
+            try string = data.convertHtmlSymbols()!
+        } catch {
+            print(error)
+        }
+        return string
     }
 
 }

@@ -9,7 +9,8 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
+    var spinnerWidget: SpinnerWidget!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let changeTitle = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
@@ -18,6 +19,21 @@ class BaseViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor(hexString: "#9012fe")
         navigationController?.navigationBar.tintColor = UIColor.white
         // Do any additional setup after loading the view.
+    }
+    
+    /**
+     This method is called to show spinner.
+     */
+    func showSpinner() {
+        spinnerWidget = SpinnerWidget()
+        spinnerWidget.showSpinner(contentView: self)
+    }
+    
+    /**
+     This method is called to remove spinner.
+     */
+    func hideSpinner() {
+        spinnerWidget.hideSpinner()
     }
 
     override func didReceiveMemoryWarning() {

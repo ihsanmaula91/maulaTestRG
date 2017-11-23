@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC2F3FB61FC74490008E1E27 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2F3FB51FC74490008E1E27 /* StringExtension.swift */; };
+		CC2F3FBA1FC75967008E1E27 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2F3FB91FC75967008E1E27 /* Reachability.swift */; };
+		CC2F3FBD1FC75ABE008E1E27 /* SpinnerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2F3FBB1FC75ABE008E1E27 /* SpinnerWidget.swift */; };
+		CC2F3FBE1FC75ABE008E1E27 /* SpinnerWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2F3FBC1FC75ABE008E1E27 /* SpinnerWidget.xib */; };
 		CC8BC99F1FC70E670021E167 /* QuestionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BC99E1FC70E670021E167 /* QuestionListModel.swift */; };
 		CC9C797A1FC5D64700552773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C79791FC5D64700552773 /* AppDelegate.swift */; };
 		CC9C797C1FC5D64700552773 /* CategoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9C797B1FC5D64700552773 /* CategoryPage.swift */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC2F3FB51FC74490008E1E27 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		CC2F3FB91FC75967008E1E27 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		CC2F3FBB1FC75ABE008E1E27 /* SpinnerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerWidget.swift; sourceTree = "<group>"; };
+		CC2F3FBC1FC75ABE008E1E27 /* SpinnerWidget.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpinnerWidget.xib; sourceTree = "<group>"; };
 		CC8BC99E1FC70E670021E167 /* QuestionListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListModel.swift; sourceTree = "<group>"; };
 		CC9C79761FC5D64700552773 /* MaulaTriviaRG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaulaTriviaRG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9C79791FC5D64700552773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC2F3FB71FC7592D008E1E27 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				CC2F3FBB1FC75ABE008E1E27 /* SpinnerWidget.swift */,
+				CC2F3FBC1FC75ABE008E1E27 /* SpinnerWidget.xib */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+		CC2F3FB81FC75957008E1E27 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CC2F3FB91FC75967008E1E27 /* Reachability.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		CC9C796D1FC5D64600552773 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +124,7 @@
 		CC9C79781FC5D64700552773 /* MaulaTriviaRG */ = {
 			isa = PBXGroup;
 			children = (
+				CC2F3FB81FC75957008E1E27 /* Util */,
 				CCEC2BB21FC713E80064098D /* MockJson */,
 				CC9C79AB1FC6114B00552773 /* Base */,
 				CC9C79A31FC5FF0500552773 /* Model */,
@@ -127,6 +153,7 @@
 		CC9C799C1FC5DCC500552773 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				CC2F3FB71FC7592D008E1E27 /* Spinner */,
 				CC9C799E1FC5DDB600552773 /* CategoryCollectionViewCell.swift */,
 				CCEC2BB71FC71C550064098D /* QuestionCollectionViewCell.swift */,
 			);
@@ -147,6 +174,7 @@
 			children = (
 				CC9C79A11FC5F50E00552773 /* UIColorExtension.swift */,
 				CC9C79A61FC6054500552773 /* ArrayExtension.swift */,
+				CC2F3FB51FC74490008E1E27 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -264,6 +292,7 @@
 				CC9C79841FC5D64700552773 /* Assets.xcassets in Resources */,
 				CC9C797F1FC5D64700552773 /* Main.storyboard in Resources */,
 				CCEC2BB41FC714290064098D /* Category.json in Resources */,
+				CC2F3FBE1FC75ABE008E1E27 /* SpinnerWidget.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2F3FBA1FC75967008E1E27 /* Reachability.swift in Sources */,
 				CC9C799F1FC5DDB600552773 /* CategoryCollectionViewCell.swift in Sources */,
 				CC9C797C1FC5D64700552773 /* CategoryPage.swift in Sources */,
 				CC9C79A91FC60EC600552773 /* QuestionPage.swift in Sources */,
@@ -291,7 +321,9 @@
 				CC9C79AD1FC6115D00552773 /* BaseViewController.swift in Sources */,
 				CCEC2BB61FC7144A0064098D /* CategoryModel.swift in Sources */,
 				CC9C79A71FC6054500552773 /* ArrayExtension.swift in Sources */,
+				CC2F3FBD1FC75ABE008E1E27 /* SpinnerWidget.swift in Sources */,
 				CC9C79821FC5D64700552773 /* MaulaTriviaRG.xcdatamodeld in Sources */,
+				CC2F3FB61FC74490008E1E27 /* StringExtension.swift in Sources */,
 				CC9C797A1FC5D64700552773 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

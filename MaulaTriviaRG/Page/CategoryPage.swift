@@ -43,10 +43,14 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let categoryId = categories[indexPath.row].id!
-        categoryName = categories[indexPath.row].name!
-        if !isRequestQuestionData {
-            getQuestionData(categoryId)
+        if !Reachability.isConnectedToNetwork(){
+            showPopupOffline()
+        } else {
+            let categoryId = categories[indexPath.row].id!
+            categoryName = categories[indexPath.row].name!
+            if !isRequestQuestionData {
+                getQuestionData(categoryId)
+            }
         }
     }
     
@@ -73,17 +77,19 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
     
     func getQuestionData(_ categoryId: Int) {
         isRequestQuestionData = true
-        let url = URL(string: "https://opentdb.com/api.php?amount=10&category=\(categoryId)&type=multiple")
+        showSpinner()
+        let url = URL(string: "https://opentdb.com/api.php?amount=20&category=\(categoryId)&type=multiple")
         URLSession.shared.dataTask(with: url!, completionHandler: {
             (data, response, error) in
             if(error != nil){
                 self.isRequestQuestionData = false
                 self.showErrorAlert()
+                self.hideSpinner()
             }else{
                 do{
                     let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
-                    
                     OperationQueue.main.addOperation({
+                        self.hideSpinner()
                         self.isRequestQuestionData = false
                         self.questionList = QuestionListModel(dictionary: json as NSDictionary)
                         self.performSegue(withIdentifier: "goToQuestionPage", sender: nil)
@@ -92,6 +98,7 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
                 }catch _ as NSError {
                     self.isRequestQuestionData = false
                     self.showErrorAlert()
+                    self.hideSpinner()
                 }
             }
         }).resume()
@@ -108,6 +115,18 @@ class CategoryPage: BaseViewController, UICollectionViewDataSource, UICollection
     
     func showErrorAlert() {
         let message = "Oops! Something went wrong."
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            alertController.dismiss(animated: true, completion: nil)
+        })
+        
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func showPopupOffline() {
+        let message = "No internet connection."
         let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
